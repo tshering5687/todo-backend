@@ -11,7 +11,10 @@ dotenv.config()
 const app: Express = express()
 
 //  Middleware
-app.use(cors())
+app.use(cors({
+    origin: '*',
+    credentials: false
+}))
 app.use(express.json())
 
 //  Routes
